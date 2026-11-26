@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Observability Platform</title>
+<link rel="stylesheet" href="/dashboard.css">
+<main>
+  <header>
+    <h1>AI Observability Platform</h1>
+    <button id="refresh">Refresh</button>
+  </header>
+  <p id="status" role="status">Loading synthetic telemetry</p>
+  <h2>Service health</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr>
+        <th scope="col">Service</th><th scope="col">Samples</th><th scope="col">Success</th>
+        <th scope="col">p95 (ms)</th><th scope="col">Mean cost (micro USD)</th>
+        <th scope="col">Input drift</th><th scope="col">Prediction drift</th>
+      </tr></thead>
+      <tbody id="overview"></tbody>
+    </table>
+  </div>
+  <h2>Incident replay</h2>
+  <div id="incidents"></div>
+</main>
+<script src="/dashboard.js" defer></script>
+</html>
